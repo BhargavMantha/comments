@@ -8,7 +8,6 @@ RUN chown -R node:node /usr/src/app
 USER node
 WORKDIR /usr/src/app
 COPY --chown=node:node package*.json ./
-RUN npm i -g @nestjs/cli
 COPY --chown=node:node . ./
 RUN ls -l
 CMD [ "npm", "start" ]
